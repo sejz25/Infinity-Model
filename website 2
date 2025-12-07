@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<head>
+
+<title>Photography Portfolio | Home</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+  
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 95vh;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .hero-text {
+        position: absolute;
+        bottom: 15%;
+        left: 10%;
+        z-index: 10;
+        animation: fadeIn 2s ease;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+        opacity: 0.9;
+        max-width: 450px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 12px 26px;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+
+    .btn:hover {
+        background: #fff;
+        color: #000;
+    }
+
+
+  
+    .about {
+        padding: 80px 10%;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .about img {
+        width: 380px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(255,255,255,0.2);
+        transition: transform .4s ease;
+    }
+
+    .about img:hover {
+        transform: scale(1.05);
+    }
+
+    .about-text {
+        max-width: 550px;
+    }
+
+    .about-text h2 {
+        font-size: 42px;
+        margin-bottom: 15px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        line-height: 1.7;
+        opacity: 0.9;
+    }
+
+
+    .photo-style {
+        text-align: center;
+        padding: 60px 8%;
+    }
+
+    .photo-style h2 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    .style-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .card {
+        background: #111;
+        width: 300px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(255,255,255,0.08);
+        transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+    }
+
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+
+    .gallery {
+        padding: 70px 8%;
+        text-align: center;
+    }
+
+    .gallery h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .gallery p {
+        font-size: 18px;
+        opacity: 0.85;
+        margin-bottom: 50px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .photo-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .photo-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        transition: transform .4s ease, box-shadow .4s ease;
+        box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .photo-box:hover img {
+        transform: scale(1.06);
+        box-shadow: 0 0 25px rgba(255,255,255,0.7);
+    }
+
+    .photo-label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: 0.4s ease;
+        font-size: 16px;
+        backdrop-filter: blur(4px);
+    }
+
+    .photo-box:hover .photo-label {
+        opacity: 1;
+    }
+
+
+  
+    .quote {
+        padding: 90px 12%;
+        text-align: center;
+        background: linear-gradient(180deg, #000 0%, #111 100%);
+    }
+
+    .quote h3 {
+        font-size: 34px;
+        max-width: 850px;
+        margin: auto;
+        line-height: 1.6;
+        opacity: 0.9;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+
+   
+    footer {
+        text-align: center;
+        padding: 40px 10px;
+        opacity: 0.7;
+        font-size: 16px;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+</head>
+<body>
+
+
+
+<div class="hero">
+
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=80');"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1900&q=80');"></div>
+    
+    <div class="hero-text">
+        <h1>Capturing Life</h1>
+        <p>Powerful, emotional, and timeless moments — frozen forever through the lens.</p>
+        <button class="btn" onclick="scrollToGallery()">View Gallery</button>
+    </div>
+
+</div>
+
+
+
+
+<section class="about">
+    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Photographer">
+
+    <div class="about-text">
+        <h2>Hi, I'm Alex Carter</h2>
+        <p>
+            I’m a passionate photographer who believes every moment tells a story.
+            For over 8 years I've been capturing raw emotions, breathtaking landscapes,
+            and life’s fleeting instants through my lens. My work blends creativity,
+            cinematic tones, and natural beauty to freeze time in the most meaningful way.
+        </p>
+        <p>
+            From remote mountains to bustling city streets, photography has taken me on
+            incredible journeys — and every photo you see in my portfolio is a piece of that adventure.
+        </p>
+    </div>
+</section>
+
+
+
+
+<section class="photo-style">
+    <h2>My Photography Style</h2>
+
+    <div class="style-cards">
+
+        <div class="card">
+            <h3>Cinematic Colors</h3>
+            <p>Deep contrasts, dramatic lighting, and rich tones to evoke emotion.</p>
+        </div>
+
+        <div class="card">
+            <h3>Natural Moments</h3>
+            <p>Unposed, real, and authentic — capturing life as it happens.</p>
+        </div>
+
+        <div class="card">
+            <h3>Travel & Adventure</h3>
+            <p>From mountains to coastlines, exploring the world through my lens.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<section class="gallery" id="gallery">
+    <h2>Featured Photography</h2>
+    <p>A glimpse into my world — landscapes, portraits, stories, and the beauty in between.</p>
+
+    <div class="grid">
+
+        <div class="photo-box">
+
+            <img src="https://images.stockcake.com/public/2/3/b/23b3d819-516f-4dcb-8932-92d11c08fd36_large/misty-forest-stream-stockcake.jpg">
+            <div><a href="newest1.html" class="btn">Forest Mist</div></a>
+        </div>
+
+        <div class="photo-box">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="">
+            <div><a href="newest2.html" class="btn">Misty Mountains</div></a>
+        </div>
+
+        <div class="photo-box">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="">
+            <div><a href="newest3.html" class="btn">Mountain Light</div></a>
+        </div>
+
+        
+
+    </div>
+</section>
+
+
+
+<section class="quote">
+    <h3>"Photography is the story I fail to put into words — every picture is a heartbeat, a memory, a piece of my soul."</h3>
+</section>
+
+
+
+
+<footer>
+    © 2025 Alex Carter — Photography Portfolio
+</footer>
+
+
+
+<script>
+/* HERO SLIDER AUTO PLAY */
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function changeSlide() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+setInterval(changeSlide, 5000);
+
+/* SCROLL TO GALLERY BUTTON */
+function scrollToGallery() {
+    document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
