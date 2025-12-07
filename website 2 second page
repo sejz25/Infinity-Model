@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Landscape Photo Presentation</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #0d0d0d;
+        color: #fff;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+        padding: 40px 0;
+        text-align: center;
+        animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .photo-box {
+        margin: 40px auto;
+        width: 85%;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 30px rgba(255,255,255,0.3);
+        transition: transform .4s ease;
+    }
+
+    .photo-box:hover {
+        transform: scale(1.03);
+    }
+
+    .photo-box img {
+        width: 100%;
+        display: block;
+    }
+
+    .info-section {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        padding: 25px;
+        border-radius: 15px;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(7px);
+        border: 1px solid rgba(255,255,255,0.2);
+        text-align: left;
+        transition: 0.4s ease;
+        box-shadow: 0 0 20px rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    .card h2 {
+        margin: 0 0 15px;
+        font-size: 28px;
+        color: #ffe57f;
+    }
+
+    .buttons {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn {
+        padding: 12px 26px;
+        border-radius: 30px;
+        border: 2px solid #fff;
+        font-size: 18px;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+
+    .btn:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Epic Mountain River Landscape</h1>
+
+    <!-- PHOTO DISPLAY -->
+    <div class="photo-box">
+        <img src="https://images.stockcake.com/public/2/3/b/23b3d819-516f-4dcb-8932-92d11c08fd36_large/misty-forest-stream-stockcake.jpg" alt="Landscape Photo">
+    </div>
+
+    <!-- INFORMATION CARDS -->
+    <div class="info-section">
+
+        <div class="card">
+            <h2>Date Captured</h2>
+            <p><strong>Unknown.</strong> The exact capture date cannot be determined because this file does not include EXIF metadata. If you upload the original camera file (RAW/JPEG), the exact date and full metadata can be revealed.</p>
+        </div>
+
+        <div class="card">
+            <h2>Key Moments in the Picture</h2>
+            <p>• A breathtaking contrast between glowing golden sunlight and chilly moonlight.<br>
+               • A smooth mountain river reflecting the brilliant sky.<br>
+               • Dense evergreen forests standing tall, framing both sides of the scene.<br>
+               • A surreal blend of day and night—one side warm and bright, one side cool and mysterious.<br>
+               • Cinematic atmosphere created by dramatic lighting transitions.</p>
+        </div>
+
+        <div class="card">
+            <h2>Why This Photo Was Captured</h2>
+            <p>This photo was likely taken to capture a rare, magical moment in nature where the lighting creates a dramatic day-night contrast. The photographer aimed to freeze the serenity, beauty, and powerful mood of the wilderness in a single frame.</p>
+        </div>
+
+        <div class="card">
+            <h2>How This Photo Was Captured</h2>
+            <p>• Probably shot with a DSLR or mirrorless camera capable of high dynamic range.<br>
+               • A long or balanced exposure allowed details to be preserved in both bright and dark areas.<br>
+               • Tripod use is very likely for stability.<br>
+               • Color grading or HDR processing enhances the surreal sunset + moonlight blend.<br>
+               • Wide-angle lens used to capture the vast scenery.</p>
+        </div>
+
+        <div class="card">
+            <h2>Why This Photo Won an Award</h2>
+            <p>This photograph likely earned recognition because of its:</p>
+            <p>• **Unique lighting composition** — a rare dual mix of warm and cool tones.<br>
+               • **Strong emotional narrative** — symbolizes transition, harmony, and natural beauty.<br>
+               • **Technical excellence** — perfect exposure balance and cinematic color grading.<br>
+               • **Visual impact** — instantly draws the viewer into the moment.<br>
+               • **Professional composition** using leading lines and natural framing.</p>
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <button class="btn" onclick="window.scrollTo({top: 0, behavior:'smooth'})">Back to Top</button>
+        <button class="btn" onclick="alert('Download feature coming soon!')">Download Info</button>
+    </div>
+
+</div>
+
+</body>
+</html>
